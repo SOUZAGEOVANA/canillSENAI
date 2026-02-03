@@ -2,7 +2,7 @@
 
 include "./controller/controlador.php";
 
-$URL = $_SERVER ['REQUEST_URI'];
+$URL =  parse_url ($_SERVER ['REQUEST_URI'], PHP_URL_PATH);
 echo $URL;
 
 if($URL == "/canillsenai/"){
@@ -25,7 +25,7 @@ else if ($URL == "/canillsenai/peixes"){
 }
 
 else if ($URL == "/canillsenai/pesquisa"){
-    echo "rota de pesquisa";
+    pesquisaPage();
 }
 
 else {
