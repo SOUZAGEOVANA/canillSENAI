@@ -13,10 +13,10 @@
 <nav>
 
     <ul>
-        <li class="active"><a href="/canillsenai/">Todos</a></li>
-        <li class=""><a href="/canillsenai/cachorros">Cachorros</a></li>
-        <li class=""><a href="/canillsenai/gatos">Gatos</a></li>
-        <li class=""><a href="/canillsenai/peixes">Peixes</a></li>
+        <li class="<?= $active['main']?>"><a href="/canillsenai/">Todos</a></li>
+        <li class="<?= $active['cachorros']?>"><a href="/canillsenai/cachorros">Cachorros</a></li>
+        <li class="<?= $active['gatos']?>"><a href="/canillsenai/gatos">Gatos</a></li>
+        <li class="<?= $active['peixes']?>"><a href="/canillsenai/peixes">Peixes</a></li>
     </ul>
 </nav>
 

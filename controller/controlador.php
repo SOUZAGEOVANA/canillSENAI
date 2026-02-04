@@ -1,8 +1,17 @@
 <?php
 include "./data/animais.php";
 
+$active =[
+    "main" => "",
+    "gatos" => "",
+    "cachorros" =>"",
+    "peixes" => ""
+
+];
+
 function mainPage(){
-    global $items;
+    global $items, $active;
+    $active['main'] = "active";
     $banner = "./images/allanimals.jpg";
     $title = "todos os animais";
     $content = $items;
@@ -11,7 +20,8 @@ function mainPage(){
 }
 
 function gatosPage(){
-    global $items;
+    global $items;$active;
+      $active['gatos'] = "active";
     $banner = "./images/banner_cat.jpg";
     $title = "gatos";
     $content =  array_filter ($items, function($animal){
@@ -25,11 +35,14 @@ function gatosPage(){
     include "./include/layout.php";
 }
 function cachorrosPage(){
-     global $items;
+     global $items,$active;
+       $active['cachorro'] = "active";
     $banner = "./images/banner_dog.jpg";
     $title = "cachorros"; 
     $content =  array_filter ($items, function($animal){
          return $animal['type'] == "cachorro";
+
+        
 
     });
 
@@ -39,11 +52,14 @@ function cachorrosPage(){
 }
 
 function peixesPage(){
-     global $items;
-    $banner = "./mages/banner_fish.jpg";
+     global $items,$active;
+       $active['peixe'] = "active";
+    $banner = "./images/banner_fish.jpg";
     $title = "peixes";
      $content =  array_filter ($items, function($animal){
          return $animal['type'] == "peixe";
+
+        
 
     });
 
