@@ -24,6 +24,11 @@ else if ($URL == "/canillsenai/peixes"){
     
 }
 
+else if ($URL == "/canillsenai/coelho"){
+    coelhoPage();
+
+}
+
 else if ($URL == "/canillsenai/pesquisa"){
     pesquisaPage();
 }

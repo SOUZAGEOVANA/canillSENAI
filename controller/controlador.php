@@ -5,7 +5,8 @@ $active =[
     "main" => "",
     "gatos" => "",
     "cachorros" =>"",
-    "peixes" => ""
+    "peixes" => "",
+     "coelho" => "",
 
 ];
 
@@ -67,6 +68,25 @@ function peixesPage(){
 }
 
 
+
+    function coelhoPage(){
+
+        global $items,$active;
+       $active['coelho'] = "active";
+       $banner ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8ll6Eqqd84m2NCFY5xwIa7vODF8KV7w4fHw&s";
+       $title = "coelho";
+        $content =  array_filter ($items, function($animal){
+            return $animal['type'] == "coelho";
+            
+    
+     
+    });
+
+    include "./include/layout.php";
+
+
+}
+    
 
 function pesquisaPage(){
      global $items;

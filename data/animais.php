@@ -119,7 +119,67 @@ $items = [
         'color' => 'preto',
         'genre' => 'masculino',
         'type'  => 'peixe'
-    ]
+    ],
+
+    [
+        'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8ll6Eqqd84m2NCFY5xwIa7vODF8KV7w4fHw&s',
+        'name'  => 'Sylvilagus',
+        'color' => 'marrom',
+        'genre' => 'masculino',
+        'type'  => 'coelho'
+    ],
+     
+    [
+        'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZBhOixQl1KgO86Yj6cdvNA-qsooKaHUOtzw&s',
+        'name'  => 'branco',
+        'color' => 'teddy lop',
+        'genre' => 'masculino',
+        'type'  => 'coelho'
+    ],
+
+    [
+        'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQewNkF0SpshQdoE9P_ZWnkAXH9ZpkwN44KsQ&s',
+        'name'  => 'teddy dwerg',
+        'color' => 'branco e cinza',
+        'genre' => 'masculino',
+        'type'  => 'coelho'
+    ],
+
+    [
+        'image' => 'https://dw0jruhdg6fis.cloudfront.net/producao/29407608/G/img_20200916_095326939.jpg',
+        'name'  => 'mini riberão preto',
+        'color' => 'cinza e branco',
+        'genre' => 'masculino',
+        'type'  => 'coelho'
+    ] , 
+
+    [
+     'image' => 'https://euamomeusanimais.com.br/wp-content/uploads/2022/08/Fuzzy-lop-1024x576.jpg',
+     'name'  => 'Fuzzy lop',
+     'color' => 'branco e amarelo',
+     'genre' => 'masculino',
+     'type'  => 'coelho'
+    ],
+
+
+    [
+        'image' => 'https://i0.wp.com/petcaramelo.com/wp-content/uploads/2020/03/coelho-mini-lion-em-sp.jpg?resize=640%2C400&ssl=1',
+        'name'  => 'mini lion',
+        'color' => 'amarelado',
+        'genre' => 'masculino',
+        'type'  => 'coelho'
+    ],
+
+
+
+
+    ['image' => 'https://euamomeusanimais.com.br/wp-content/uploads/2022/08/Holandes-1024x576.jpg',
+    'name'  => 'Holandês',
+    'color' => 'marrom escuro',
+    'genre' => 'masculino',
+    'type'  => 'coelho'
+
+],
 ];
 
 
