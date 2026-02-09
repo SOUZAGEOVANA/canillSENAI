@@ -1,6 +1,8 @@
 <?php
 include "./data/animais.php";
 
+include "./model/models.php";
+
 $active =[
     "main" => "",
     "gatos" => "",
@@ -15,20 +17,19 @@ function mainPage(){
     $active['main'] = "active";
     $banner = "./images/allanimals.jpg";
     $title = "todos os animais";
-    $content = $items;
+    $content = pegartodos($items);
 
     include "./include/layout.php";
 }
 
 function gatosPage(){
-    global $items;$active;
+    global $items,  $active;
       $active['gatos'] = "active";
     $banner = "./images/banner_cat.jpg";
     $title = "gatos";
-    $content =  array_filter ($items, function($animal){
-         return $animal['type'] == "gato";
-
-    });
+    $lista = pegartodos($items);
+    $content = pegarpelotipo($lista,"gatos");
+    
        
 
     
@@ -40,12 +41,9 @@ function cachorrosPage(){
        $active['cachorro'] = "active";
     $banner = "./images/banner_dog.jpg";
     $title = "cachorros"; 
-    $content =  array_filter ($items, function($animal){
-         return $animal['type'] == "cachorro";
-
-        
-
-    });
+    $lista = pegartodos($items);
+    $content = pegarpelotipo($lista,"cachorros");
+ 
 
     
 
@@ -57,12 +55,9 @@ function peixesPage(){
        $active['peixe'] = "active";
     $banner = "./images/banner_fish.jpg";
     $title = "peixes";
-     $content =  array_filter ($items, function($animal){
-         return $animal['type'] == "peixe";
+    $lista = pegartodos($items);
+    $content = pegarpelotipo($lista,"peixe");
 
-        
-
-    });
 
     include "./include/layout.php";
 }
@@ -75,26 +70,25 @@ function peixesPage(){
        $active['coelho'] = "active";
        $banner ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8ll6Eqqd84m2NCFY5xwIa7vODF8KV7w4fHw&s";
        $title = "coelho";
-        $content =  array_filter ($items, function($animal){
-            return $animal['type'] == "coelho";
-            
-    
-     
-    });
+       $lista = pegartodos($items);
+       $content = pegarpelotipo($lista,"coelho");
 
+       
     include "./include/layout.php";
 
-
-}
     
+    
+     
+    }
+
 
 function pesquisaPage(){
      global $items;
      $nome = $_GET['nome'] ?? "";
-     $content =  array_filter ($items, function($animal) use($nome){
-         return $animal['name'] == $nome;
+    $lista = pegartodos($items);
+    $content = pelonome($lista,$nome);
 
-    });
+
 
     include "./include/layout.php";
 }
